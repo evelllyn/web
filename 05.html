@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--RWD必要元素-->
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com"   crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas  +Neue&family=Kenia&family=Noto+Sans+TC&display=swap"   rel="stylesheet">
+  <!-- 載入JQuery文自動效 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    >
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kenia&family=Noto+Sans+TC&display=swap');
+
+
+    /*導覽列格式*/
+    .header{
+      background-color: #000000;
+    }
+    .herder .comp{
+      font-weight: bold;
+      font-size: 30px;
+      align-self: center;
+      flex-shrink: 0;
+    }
+    .header a{
+      color: #f5f38c;
+      /*字加粗*/
+      font-weight:bold;
+      /*去掉底線*/
+      text-decoration: none;
+      /*變block型態但又可以inline*/
+      display: inline-block;
+      padding: 10px;
+      /* 變化的時間拉長 */
+      transition: .5s;
+    }
+    .header a:hover{
+      background-color: #1cdd43e2;
+      padding: 10px 20px;
+    }
+    nav{
+      /* 靠右邊排 */
+      text-align: right;
+      /*或是w100% 要把nav撐開*/
+      flex-grow: 1;
+    }
+
+    /* banner */
+    .banner{
+      width: auto;
+      height: 300px;
+      background-image: url(https://picsum.photos/id/563/2100/700);
+      background-size: cover;
+      background-position: center;
+      padding: 100px;
+      font-size: 80px;
+      color: #fff;
+      font-family: 'Bebas Neue', cursive;
+    }
+
+    /*內容樣式*/
+    .ct{
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+    .en{
+      font-family: 'Kenia', cursive;
+    }
+    .layout{
+      margin-top: 30px;
+    }
+    .card{
+      flex: 1 1 auto;
+      /*grow shrink basis*/
+      margin: 1%;
+      border: 1px solid #c1c1c1;
+      border-radius: 10px;
+      position: relative;
+
+    }
+    .card img{
+      width: 100%;
+      border-radius: 10px 10px 0 0;
+      transition: .5s;
+
+    }
+    .card img:hover{
+      /* 不透明度 0 ~ 1 */
+      opacity: .5;
+
+    }
+    .card .word{
+      width: 90%;
+      margin: auto;
+    }
+    .card .tag{
+      background: #ff0000;
+      color: #fff;
+      font-weight: bold;
+      position: relative;
+      padding: 20px 10px;
+      border-radius: 50%;
+      position: absolute;
+      top: 10px;left: 10px;
+      z-index: 1;
+
+    }
+    /* 報名訊息 */
+    .project{
+      background-color: #000000;
+      font-weight: bold;
+      color: #52c535;
+      padding: 10px;
+      width: 160px;
+      text-align: center;
+    }
+    .p-info{
+      background-color: #f5f38c;
+      padding: 10px;
+      display: none;
+    }
+
+    /*活動簡介*/
+    .intro{
+      background-color: beige;
+      margin: 30px 0;
+    }
+    .intro .limit{
+      background-color: #f5f38c;
+      width: 80%;
+      margin: auto;
+    }
+    .intro .limit .infopic{
+      flex: 1 1 0;
+    }
+    .intro .limit .infoPic img{
+      vertical-align: bottom;
+      /*修正圖片底部對齊*/
+    }
+    .intro .limit .inforText{
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1 1 0;
+    }
+    /*頁尾*/
+    .footer{
+      background-color: #000000;
+      color: #f5f38c;
+      text-align: center;
+      padding: 10px;
+      margin-top: 60px;
+    }
+
+    /*RWD控制*/
+    /*若大於768則會做出下面控制*/
+    @media screen and (min-width:768px){
+      .header{
+        display: flex;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+        /* 在z軸的高度(讓他浮起來) */
+      }
+      .layout{
+        display: flex;
+      }
+      .intro .limit{
+        display: flex;
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+  <!--導覽列-->
+  <div class="header">
+    <img src="https://img.logoipsum.com/238.svg" alt="logo">
+    <span class="comp animate__animated animate__bounceInRight" style="color: #f5f38c;">當我們同在一起</span>
+    <nav>
+      <a href="#">關於我們</a>
+      <a href="#">最新活動</a>
+      <a href="#">團員介紹</a>
+      <a href="#">遊戲專區</a>
+      <a href="#" style="margin-right: 40px;">聯繫我們</a>
+    </nav>
+  </div>
+
+  <!-- banner -->
+  <div class="banner">
+    DO YOU WANNA PLAY WITH ME
+  </div>
+
+
+  <!--網頁內容-->
+  <h1>全家免費</h1>
+  <p class="ct">全家免費，權益國有威望處理神秘未來特性臺灣不足一年承諾出台刺激，組織人類主人離線眼光傷心臺灣支持加快電器屬性，大小極大，只不過，有了標準有着只有使用準確新聞建材這裡感覺，更多加工需求互相城市自身防止灌水魅力蘋果，區域消失經理比如，越來越如下節省食品話題氣息從來沒母親市場價研究所，造型至少，策略他說相當表演相互接到，心裡能源尷尬安全推坑王空調下列，天堂異常故意並且，日月潭好好婚姻報告給你這個需求往。</p>
+  <p class="en">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed sit accusantium amet animi! Praesentium labore, perferendis ipsum officiis ducimus veritatis repudiandae similique magnam deleniti ullam! Voluptates explicabo magnam quos aliquam inventore alias perferendis quasi, eaque labore, ratione unde exercitationem pariatur ut illum quis sint iure aliquid in harum officia. Harum autem a laboriosam nam voluptas pariatur? Minima ab voluptatem nam natus inventore, debitis error, suscipit dignissimos dolor alias quos esse est voluptatibus impedit rem reiciendis voluptates eaque quis, eius tempora aliquid praesentium? Temporibus unde quibusdam modi a vitae repudiandae saepe, amet quod praesentium repellendus aliquam eligendi est totam numquam sapiente.</p>
+  <div class="layout">
+    <div class="card">
+      <img src="https://picsum.photos/600/400?random1&quot"  alt="cardpicture">
+      <div class="word">
+        <h3>Index-1</h3>
+          <p>Lorem ipsum dolor sit amet consectetur   adipisicing   elit. Illum aut hic harum repellat  aspernatur, quod,  provident quo debitis rem fugiat  neque consequuntur vel  exercitationem veniam odio   esse asperiores deleniti  alias minus perspiciatis!   Doloribus illo magni   dignissimos! Asperiores  doloremque dignissimos autem  beatae et molestiae cum  commodi natus, libero, quae  placeat iusto. Deserunt   tenetur quidem obcaecati eius  quod voluptate est   exercitationem, dolorem excepturi   dicta possimus  dolor eos natus perferendis laudantium   facilis ex  nesciunt dolores odio sed earum! Dolores est   error   pariatur impedit facilis ad vel perferendis.    Eligendi, amet maxime voluptate quasi laborum iste,   eum  voluptates praesentium iure consectetur illum?   Voluptas,   labore eos.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="tag">HOT</div>
+      <img src="https://picsum.photos/600/400?random2&quot" alt="cardpicture">
+      <div class="word">
+        <h3>Index-2</h3>
+          <p>Lorem ipsum dolor sit amet consectetur   adipisicing   elit. Illum aut hic harum repellat  aspernatur, quod,  provident quo debitis rem fugiat  neque consequuntur vel  exercitationem veniam odio   esse asperiores deleniti  alias minus perspiciatis!   Doloribus illo magni   dignissimos! Asperiores  doloremque dignissimos autem  beatae et molestiae cum  commodi natus, libero, quae  placeat iusto. Deserunt   tenetur quidem obcaecati eius  quod voluptate est   exercitationem, dolorem excepturi   dicta possimus  dolor eos natus perferendis laudantium   facilis ex  nesciunt dolores odio sed earum! Dolores est   error   pariatur impedit facilis ad vel perferendis.    Eligendi, amet maxime voluptate quasi laborum iste,   eum  voluptates praesentium iure consectetur illum?   Voluptas,   labore eos.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://picsum.photos/600/400?random3&quot" alt="cardpicture">
+      <div class="word">
+        <h3>Index-3</h3>
+          <p>Lorem ipsum dolor sit amet consectetur   adipisicing   elit. Illum aut hic harum repellat  aspernatur, quod,  provident quo debitis rem fugiat  neque consequuntur vel  exercitationem veniam odio   esse asperiores deleniti  alias minus perspiciatis!   Doloribus illo magni   dignissimos! Asperiores  doloremque dignissimos autem  beatae et molestiae cum  commodi natus, libero, quae  placeat iusto. Deserunt   tenetur quidem obcaecati eius  quod voluptate est   exercitationem, dolorem excepturi   dicta possimus  dolor eos natus perferendis laudantium   facilis ex  nesciunt dolores odio sed earum! Dolores est   error   pariatur impedit facilis ad vel perferendis.    Eligendi, amet maxime voluptate quasi laborum iste,   eum  voluptates praesentium iure consectetur illum?   Voluptas,   labore eos.</p>
+    </div>
+    </div>
+  </div>
+  <div class="intro">
+    <div class="limit">
+      <div class="infoPic">
+        <img src="https://picsum.photos/600/400?random4" alt="ProjaectPicture">
+      </div>
+      <div class="inforText">
+        <h3>活動頁面</h3>
+        <p>
+          大人管理系統設計豐富中有視頻四周看見當初宜蘭立即，表演地圖一會德國條款兩次傳說資格國語很多人有一定移動，四周促進成為日前否則大全區別兒童產品地上，某種工藝文明公園全市投資尋求請教支付外國如此，升級也想協助住房森林數碼相機條例財政當前位置電腦投資者，逐步但我創新全國快速陽明山舉辦運輸文字管理系統，隨後各級場所此時角色和平島獲取慢慢保密好好作為，什麼樣，金幣認真充分規模目的敵人行政是由瀏覽器，文件大。
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- 報名訊息 -->
+  <div class="project">報名方式</div>
+  <div class="p-info">
+    <p>這就是需要，獲取開展用來運動人力促進玄幻計算機東方行情，老大沒事，我去聯合驚訝現在，變成增強也是獨特其它利益網際網路也會這個再也保密，為了圍繞電子商務，註明因為接受年代上網將會他不成人，所謂眾人加入時間高速附件包含也許最低寫作最新空間儀器資料，有利於他說總經理方式有機會藥物動畫看見集團一顆公佈醫藥簡直，魔法後果人事手上或是上帝多種推坑王，是指提示訊息或是模糊支持最低健康連載這麼最高重點，不是很好處苗栗一句話回事將軍笑話，權限密碼答應配套增加幸福這樣玄幻婚姻自從就好全國，前進熱情是個，經典不行房屋又是再度防止轉載較高一份兩個不論存儲，應用硬體樓上配件足球飛機商務通常我一自行，如同樣子這麼，他還。</p>
+  </div>
+  <h3>活動說明</h3>
+    <p>多多流程地方以後殺手，郵箱財富強調，發表黑暗夢想這樣恢復做出人氣回到終於是由分鐘百度死亡革命，未知生命鮮花出版對你靈活實在學會我會產品，把他不願意新竹特別基隆人事十大收藏，微微規範成立類別和諧玩家添加網咖義務瀏覽次數你自己，高雄很熱，精美操作來的飲食平均上下打算教育考核，實力決策安徽之處情緒購物廣播來說瞭解提高，隊伍廣場是指小子文字承受蘋果手術同學和你，溫柔這種關係裝備自動對外激情我就追求樂隊，你也種種困難台中協議，臨時家族長期老師管理系統床上無限人士魔法分享想要連結，市場價下去姑娘是在探索可。</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, praesentium impedit. Aliquid ex, inventore consequuntur adipisci pariatur dolore sunt consectetur sequi cumque architecto. Sed quidem odit architecto aliquid unde atque laborum suscipit at quo amet eius fuga voluptates eligendi vel eveniet consectetur accusantium ex voluptate, saepe magnam repudiandae et! Quod praesentium id perferendis mollitia esse maxime veniam cumque recusandae, eveniet, rem voluptatibus exercitationem nobis repellat dicta suscipit amet eius voluptates maiores. Fugiat in vero quaerat fugit incidunt, explicabo sunt, optio totam cumque quidem, praesentium quis illo. Eius quod ut, consequatur accusamus fugit itaque. Blanditiis voluptatibus obcaecati a praesentium possimus officiis?</p>
+    <div class="footer">
+      &copy copyright 2022 by Evelyn.
+    </div>
+<!-- 載入JQuery函式庫 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<!-- JQuery控制 -->
+<script>
+  $(".project").hover(function(){
+    $(".p-info").slideToggle();
+  })
+</script>
+
+</body>
+</html>

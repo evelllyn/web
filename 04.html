@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box{
+      /*暫時填顏色幫助排版*/
+      background-color: #b6cadb;
+      height: 800px;
+      /*操控內部物件*/
+      display: flex;
+      flex-direction: row-reverse;
+      /*跑到c橫向的中間*/
+      justify-content: center;
+      /*跑到縱向的中間*/
+      align-items: center;
+    }
+    .item{
+      /*w200 +tab*/
+      width: 100px;
+      height: 100px;
+      background-color: #ffe940;
+      border: 1px solid #801686;
+      color: #731a1a;
+      /*圓角半徑*/
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 60px;
+    }
+    .a{
+      background-color: #ffe940 ;
+    }
+    .b{
+      background-color: #62ffe2 ;
+    }
+    .c{
+      background-color: #ffe940 ;
+    }
+    .d{
+      background-color: #62ffe2 ;
+    }
+    .e{
+      background-color: #ffe940 ;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="item a">A</div>
+    <div class="item b">B</div>
+    <div class="item c">C</div>
+    <div class="item d">D</div>
+    <div class="item e">E</div>
+  </div>
+</body>
+</html>
